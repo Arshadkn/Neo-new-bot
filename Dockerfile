@@ -6,7 +6,7 @@ COPY requirements.txt /requirements.txt
 
 RUN cd /
 RUN pip3 install -U pip && pip3 install -U -r requirements.txt
-RUN mkdir /Neo
-WORKDIR /Neo
-COPY start.sh /start.sh
-CMD ["/bin/bash", "/start.sh"]
+WORKDIR /DQ-The-File-Donor
+
+COPY . .
+CMD ["python3", "bot.py"]
